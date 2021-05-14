@@ -1,5 +1,5 @@
 require "colorize"
-puts "What file are we moving?".colorize.fore(:red)
+puts "What file are we handling??".colorize.fore(:red)
 file = gets
 if (File.exists?("#{file}") == true)
   if(File.file?("#{file}")) 
