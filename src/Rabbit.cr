@@ -7,7 +7,16 @@ while (true)
     file = gets
     if (File.exists?("#{file}") == true)
       if(File.file?("#{file}")) 
-        puts "file exists"
+        puts "Is this your file?"
+        icon = "📝"
+        puts "#{icon} : #{file}\n[y/n]"
+        isFile = gets
+        if (isFile == "y")
+          puts "What would you like to do to this file?"
+          # Put the handling file function here
+        elsif (isFile == "n")
+          puts "Ok! Lets see if we can get this file next time!"
+        end
       else 
           puts "That is a dir, would I like to cd into it?\n[y/n]"
           cdinto = gets
